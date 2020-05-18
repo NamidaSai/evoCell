@@ -13,4 +13,6 @@ https://www.dafont.com/josephin.font
 All sound effects and music are my own and available on my soundcloud:
 https://soundcloud.com/timeveil
 
-Basic functionality code for the game was modelled on the Tilevania section of the Complete C# Unity Developer 2D: Learn to Code Making Games online class by Ben Tristem and Rick Davidson. Further code also takes inspiration from Brackeys Unity tutorial videos.
+Basic functionality code for the game was modelled on the Tilevania section of the Complete C# Unity Developer 2D: Learn to Code Making Games online class by Ben Tristem and Rick Davidson. Further code also takes inspiration from Brackeys Unity tutorial videos. 
+
+Hello Geoff
