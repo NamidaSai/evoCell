@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         Jump();
         Fall();
         ClimbLadder();
-        FlipSprite(); // BUG: causes dissolve shader material not to display properly
+        FlipSprite();
         Die();
         Test(); // for debugging purposes only, triggered with Tab key
     }
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         bool playerHasHorizontalSpeed = (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon);
         if (playerHasHorizontalSpeed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+            transform.localScale = new Vector3(Mathf.Sign(myRigidbody.velocity.x), 1f, 1f);
         }
     }
 
@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             //insert function to test
-            Die();
+            myAnimator.SetTrigger("Dying");
         }
     }
 }
