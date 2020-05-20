@@ -11,5 +11,5 @@ public class VerticalScroll : MonoBehaviour
     {
         float yMove = scrollRate * Time.deltaTime;
         transform.Translate(new Vector2(0f, yMove));
-    }
+   }
 }

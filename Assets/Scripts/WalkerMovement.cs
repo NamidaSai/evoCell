@@ -34,7 +34,7 @@ public class WalkerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject is Player) { return; }
+        if (other.gameObject.GetComponent<Player>()) { return; }
         transform.localScale = new Vector2(-(Mathf.Sign(myRigidbody.velocity.x)), 1f);
     }
 }

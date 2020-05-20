@@ -38,8 +38,9 @@ public class Player : MonoBehaviour
         Jump();
         Fall();
         ClimbLadder();
-        FlipSprite();
+        FlipSprite(); // BUG: causes dissolve shader material not to display properly
         Die();
+        Test(); // for debugging purposes only, triggered with Tab key
     }
 
     private void Walk()
@@ -50,6 +51,15 @@ public class Player : MonoBehaviour
 
         bool playerHasHorizontalSpeed = (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon);
         myAnimator.SetBool("isWalking", playerHasHorizontalSpeed);
+    }
+
+    private void FlipSprite()
+    {
+        bool playerHasHorizontalSpeed = (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon);
+        if (playerHasHorizontalSpeed)
+        {
+            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+        }
     }
 
     private void Jump()
@@ -95,20 +105,12 @@ public class Player : MonoBehaviour
         myAnimator.SetBool("isClimbing", playerHasVerticalSpeed);
     }
 
-    private void FlipSprite()
-    {
-        bool playerHasHorizontalSpeed = (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon);
-        if (playerHasHorizontalSpeed)
-        {
-            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
-        }
-    }
-
     private void Die()
     {
         if(cheatMode) { Debug.Log("Player dead."); return; }
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazard")))
         {
+            if (!isAlive) { return; }
             isAlive = false;
             ResetStates();
             myAnimator.SetTrigger("Dying");
@@ -130,5 +132,14 @@ public class Player : MonoBehaviour
         myAnimator.SetBool("isClimbing", false);
         myRigidbody.gravityScale = gravityScaleAtStart;
         myRigidbody.velocity = new Vector2(0f, 0f);
+    }
+
+    private void Test()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            //insert function to test
+            Die();
+        }
     }
 }
