@@ -40,9 +40,10 @@ public class GameSession : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void ProcessPlayerDeath(float delayInSeconds)
+    public void ProcessPlayerDeath(float delayInSeconds, bool noLivesMode)
     {
         var sceneLoader = FindObjectOfType<SceneLoader>();
+        if(noLivesMode) { sceneLoader.RestartLevel(delayInSeconds); return; }
         if (playerLives > 1)
         {
             TakeLife();
