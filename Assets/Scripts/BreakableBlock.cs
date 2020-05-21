@@ -5,7 +5,8 @@ using UnityEngine;
 public class BreakableBlock : MonoBehaviour
 {
     [SerializeField] Sprite[] hitSprites = default;
-    [SerializeField] float sfxSoften = 0.2f;
+    [Tooltip("Softens blockHit and blockBreak volume compared to interactablesVolume.")]
+    [Range(0f,0.5f)] [SerializeField] float sfxSoften = 0.2f;
 
     int timesHit = 0;
 

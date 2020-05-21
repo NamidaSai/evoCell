@@ -81,9 +81,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2ddab88d5b6954aa0b7f74d71adeefc4, type: 3}
   - {fileID: 8300000, guid: b00bc4a6c60b64071bd2ba3109710390, type: 3}
   - {fileID: 8300000, guid: a6aa160651c1b4aa5a690c6d9f494c33, type: 3}
-  winLevelClip: {fileID: 0}
-  lifeLostClip: {fileID: 8300000, guid: f1c7d30fa277d4f3b82ad1a3fe53afba, type: 3}
-  loseGameClip: {fileID: 0}
+  winLevelClip: {fileID: 8300000, guid: 9e03ae727d64b4da98f3a75a468d868b, type: 3}
+  lifeLostClip: {fileID: 8300000, guid: 35e70dae0bd624904ac122cb5cd1824c, type: 3}
+  loseGameClip: {fileID: 8300000, guid: 554263d7466784a1bb0022d5ab015bcd, type: 3}
   playerVolume: 0.15
   enemyVolume: 0.05
   interactablesVolume: 0.5
