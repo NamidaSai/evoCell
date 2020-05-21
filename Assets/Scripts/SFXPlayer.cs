@@ -14,7 +14,7 @@ public class SFXPlayer : MonoBehaviour
     [Header("Interactables SFX")]
     [SerializeField] AudioClip[] gemClips = default;
     [SerializeField] AudioClip[] blockHits = default;
-    [SerializeField] AudioClip blockBreak = default;
+    [SerializeField] AudioClip[] blockBreak = default;
 
     [Header("Level SFX")]
     [SerializeField] AudioClip winLevelClip = default;
@@ -63,7 +63,7 @@ public class SFXPlayer : MonoBehaviour
 
     public AudioClip GetBlockBreakClip()
     {
-        return blockBreak;
+        return RandomClip(blockBreak);
     }
 
     public AudioClip GetWinLevelClip()

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BreakableBlock : MonoBehaviour
 {
     [SerializeField] Sprite[] hitSprites = default;
+    [SerializeField] float sfxSoften = 0.2f;
 
     int timesHit = 0;
 
@@ -28,12 +29,12 @@ public class BreakableBlock : MonoBehaviour
         if(timesHit >= maxHits)
         {
             DestroyBlock();
-            AudioSource.PlayClipAtPoint(sfxPlayer.GetBlockBreakClip(), Camera.main.transform.position, sfxPlayer.GetInteractablesVolume());
+            AudioSource.PlayClipAtPoint(sfxPlayer.GetBlockBreakClip(), Camera.main.transform.position, sfxPlayer.GetInteractablesVolume() - sfxSoften);
         }
         else
         {
             ShowNextHitSprite();
-            AudioSource.PlayClipAtPoint(sfxPlayer.GetBlockHitClip(), Camera.main.transform.position, sfxPlayer.GetInteractablesVolume());
+            AudioSource.PlayClipAtPoint(sfxPlayer.GetBlockHitClip(), Camera.main.transform.position, sfxPlayer.GetInteractablesVolume() - sfxSoften);
         }
     }
 
