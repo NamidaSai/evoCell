@@ -10,12 +10,16 @@ public class Shooter : MonoBehaviour
     [SerializeField] float projectileSpeedY = 10f;
 
     GameObject projectileParent;
+    AudioSource myAudioSource;
+    SFXPlayer sfxPlayer;
 
     const string PROJECTILE_PARENT_NAME = "Projectiles";
 
     private void Start()
     {
         CreateProjectileParent();
+        sfxPlayer = FindObjectOfType<SFXPlayer>();
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     private void CreateProjectileParent()
@@ -35,5 +39,6 @@ public class Shooter : MonoBehaviour
         disc.GetComponent<Rigidbody2D>().velocity = new Vector2
                                                (projectileSpeedX,
                                                 projectileSpeedY);
+        myAudioSource.PlayOneShot(sfxPlayer.GetShooterClip(), sfxPlayer.GetEnemyVolume());
     }
 }

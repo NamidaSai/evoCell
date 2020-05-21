@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     BoxCollider2D myFeet;
     float gravityScaleAtStart;
     GameSession gameSession;
+    AudioSource myAudioSource;
+    SFXPlayer sfxPlayer;
 
     void Start()
     {
@@ -29,6 +31,8 @@ public class Player : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRigidbody.gravityScale;
+        myAudioSource = GetComponent<AudioSource>();
+        sfxPlayer = FindObjectOfType<SFXPlayer>();
     }
 
     void Update()
@@ -74,6 +78,7 @@ public class Player : MonoBehaviour
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidbody.velocity += jumpVelocityToAdd;
             myAnimator.SetTrigger("Jumped");
+            myAudioSource.PlayOneShot(sfxPlayer.GetJumpClip(),sfxPlayer.GetPlayerVolume());
         }
     }
 
@@ -124,6 +129,14 @@ public class Player : MonoBehaviour
     {
         isAlive = false;
         ResetStates();
+        myAudioSource.PlayOneShot(sfxPlayer.GetWinLevelClip(), sfxPlayer.GetLevelVolume());
+    }
+
+    public void PlayFootstepSFX()
+    {
+        bool playerIsTouchingGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        if (!playerIsTouchingGround) { return; }
+        myAudioSource.PlayOneShot(sfxPlayer.GetFootstepsClip(), sfxPlayer.GetPlayerVolume());
     }
 
     private void ResetStates()

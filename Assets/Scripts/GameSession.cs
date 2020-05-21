@@ -43,15 +43,20 @@ public class GameSession : MonoBehaviour
     public void ProcessPlayerDeath(float delayInSeconds, bool noLivesMode)
     {
         var sceneLoader = FindObjectOfType<SceneLoader>();
+        var sfxPlayer = FindObjectOfType<SFXPlayer>();
+
         if(noLivesMode) { sceneLoader.RestartLevel(delayInSeconds); return; }
+
         if (playerLives > 1)
         {
             TakeLife();
+            AudioSource.PlayClipAtPoint(sfxPlayer.GetLifeLostClip(), Camera.main.transform.position, sfxPlayer.GetLevelVolume());
             sceneLoader.RestartLevel(delayInSeconds);
         }
         else
         {
             TakeLife();
+            AudioSource.PlayClipAtPoint(sfxPlayer.GetLoseGameClip(), Camera.main.transform.position, sfxPlayer.GetGameSessionVolume());
             HandleLoseCondition();
         }
     }
