@@ -3,7 +3,7 @@
 
 evoCell follows the quest of a cute little cell to find as many gems as possible. It is said that when reaching 100 gems, the cell will have the potential energy to evolve into something new.
 
-This game is a simple 2D platformer with 5 levels, made using the Unity Game Engine.
+This game is a 10 minutes simple 2D platformer with 5 levels, made using the Unity Game Engine.
 
 All sound effects and music are my own. Soundtrack available at the link below:
 https://soundcloud.com/timeveil
