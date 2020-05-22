@@ -15,6 +15,8 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         optionsScreen.SetActive(false);
+        musicSlider.value = PlayerPrefsController.GetMusicVolume();
+        difficultySlider.value = PlayerPrefsController.GetDifficultyLevel();
     }
 
     private void Update()
@@ -32,8 +34,6 @@ public class MainMenuController : MonoBehaviour
 
     public void LoadOptionsScreen()
     {
-        musicSlider.value = PlayerPrefsController.GetMusicVolume();
-        difficultySlider.value = PlayerPrefsController.GetDifficultyLevel();
         mainMenu.SetActive(false);
         optionsScreen.SetActive(true);
     }

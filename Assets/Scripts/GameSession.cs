@@ -16,7 +16,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] public bool noDeathMode = false;
     [SerializeField] bool noLivesMode = false;
 
-    bool gameIsPaused = false;
+    public static bool gameIsPaused = false;
 
     private void Awake()
     {

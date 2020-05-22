@@ -45,5 +45,4 @@ public class PlayerPrefsController : MonoBehaviour
     {
         return PlayerPrefs.GetFloat(DIFFICULTY_KEY);
     }
-
 }

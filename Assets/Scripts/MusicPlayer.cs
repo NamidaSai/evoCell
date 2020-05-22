@@ -6,12 +6,23 @@ public class MusicPlayer : MonoBehaviour
 {
     AudioSource audioSource;
 
-    void Start()
+    private void Awake()
     {
-        DontDestroyOnLoad(this);
+        int musicPlayerCount = FindObjectsOfType<MusicPlayer>().Length;
+        if (musicPlayerCount > 1)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Start()
+    {
         audioSource = GetComponent<AudioSource>();
-        PlayerPrefsController.SetMusicVolume(0.5f);
-        PlayerPrefsController.SetDifficultyLevel(1f);
         audioSource.volume = PlayerPrefsController.GetMusicVolume();
     }
 
