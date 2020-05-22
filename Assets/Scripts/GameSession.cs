@@ -11,9 +11,12 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI livesText = default;
     [SerializeField] TextMeshProUGUI scoreText = default;
     [SerializeField] GameObject loseLabel = default;
+    [SerializeField] GameObject pauseLabel = default;
 
     [SerializeField] public bool noDeathMode = false;
     [SerializeField] bool noLivesMode = false;
+
+    bool gameIsPaused = false;
 
     private void Awake()
     {
@@ -34,6 +37,36 @@ public class GameSession : MonoBehaviour
         SetLivesOnDifficulty();
         scoreText.text = score.ToString();
         loseLabel.SetActive(false);
+        pauseLabel.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (gameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        gameIsPaused = false;
+        Time.timeScale = 1f;
+        pauseLabel.SetActive(false);
+    }
+
+    private void Pause()
+    {
+        gameIsPaused = true;
+        Time.timeScale = 0f;
+        pauseLabel.SetActive(true);
     }
 
     private void SetLivesOnDifficulty()

@@ -42,7 +42,10 @@ public class Player : MonoBehaviour
         Fall();
         ClimbLadder();
         FlipSprite();
-        if (gameSession) { Die(); }
+        if (gameSession)
+        {
+            Die();
+        }
         Test(); // for debugging purposes only, triggered with Tab key
     }
 

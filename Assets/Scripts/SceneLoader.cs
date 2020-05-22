@@ -14,6 +14,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        Time.timeScale = 1f;
         FindObjectOfType<GameSession>().ResetGame();
         SceneManager.LoadScene(0);
     }
