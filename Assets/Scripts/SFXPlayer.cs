@@ -7,6 +7,7 @@ public class SFXPlayer : MonoBehaviour
     [Header("Player SFX")]
     [SerializeField] AudioClip[] footstepsClips = default;
     [SerializeField] AudioClip[] jumpClips = default;
+    [SerializeField] AudioClip landingClip = default;
 
     [Header("Enemy SFX")]
     [SerializeField] AudioClip[] shooterClips = default;
@@ -25,8 +26,10 @@ public class SFXPlayer : MonoBehaviour
 
     [Header("SFX Mixer")]
     [Range(0f,1f)] [SerializeField] float playerVolume = 0.5f;
+    [Range(0f,1f)] [SerializeField] float landingVolume = 0.5f;
     [Range(0f,1f)] [SerializeField] float enemyVolume = 0.3f;
     [Range(0f,1f)] [SerializeField] float interactablesVolume = 0.6f;
+    [Range(0f,1f)] [SerializeField] float blockVolume = 0.3f;
     [Range(0f,1f)] [SerializeField] float levelVolume = 0.7f;
     [Range(0f,1f)] [SerializeField] float gameSessionVolume = 0.6f;
 
@@ -44,6 +47,11 @@ public class SFXPlayer : MonoBehaviour
     public AudioClip GetJumpClip()
     {
         return RandomClip(jumpClips);
+    }
+
+    public AudioClip GetLandingClip()
+    {
+        return landingClip;
     }
 
     public AudioClip GetShooterClip()
@@ -86,6 +94,11 @@ public class SFXPlayer : MonoBehaviour
         return playerVolume;
     }
 
+    public float GetLandingVolume()
+    {
+        return landingVolume;
+    }
+
     public float GetEnemyVolume()
     {
         return enemyVolume;
@@ -94,6 +107,11 @@ public class SFXPlayer : MonoBehaviour
     public float GetInteractablesVolume()
     {
         return interactablesVolume;
+    }
+
+    public float GetBlockVolume()
+    {
+        return blockVolume;
     }
 
     public float GetLevelVolume()

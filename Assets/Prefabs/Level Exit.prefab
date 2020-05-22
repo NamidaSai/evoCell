@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9411cccfb5fa4e1d9173fb25ac54e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelLoadDelay: 7
+  levelLoadDelay: 4
 --- !u!1 &8226315796694147452
 GameObject:
   m_ObjectHideFlags: 0

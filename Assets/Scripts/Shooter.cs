@@ -30,6 +30,7 @@ public class Shooter : MonoBehaviour
             projectileParent = new GameObject(PROJECTILE_PARENT_NAME);
         }
     }
+
     public void Fire()
     {
         GameObject disc = Instantiate

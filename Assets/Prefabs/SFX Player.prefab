@@ -59,6 +59,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 29e77823c0a8a4aaebea62c7f31e9139, type: 3}
   - {fileID: 8300000, guid: b25045705c4bf434c9491fa19a48e4a3, type: 3}
   - {fileID: 8300000, guid: 5445041cf9cc04996b459b4b8250db3c, type: 3}
+  landingClip: {fileID: 8300000, guid: 5c4cb860209c440b78dd90edc619e9d3, type: 3}
   shooterClips:
   - {fileID: 8300000, guid: dee71c7c563584be39200590c0b10288, type: 3}
   - {fileID: 8300000, guid: 82b55d7a676a948c294f69a014abf160, type: 3}
@@ -84,8 +85,10 @@ MonoBehaviour:
   winLevelClip: {fileID: 8300000, guid: 9e03ae727d64b4da98f3a75a468d868b, type: 3}
   lifeLostClip: {fileID: 8300000, guid: 35e70dae0bd624904ac122cb5cd1824c, type: 3}
   loseGameClip: {fileID: 8300000, guid: 554263d7466784a1bb0022d5ab015bcd, type: 3}
-  playerVolume: 0.15
+  playerVolume: 0.5
+  landingVolume: 0.1
   enemyVolume: 0.05
-  interactablesVolume: 0.5
-  levelVolume: 0.8
+  interactablesVolume: 0.7
+  blockVolume: 0.3
+  levelVolume: 0.85
   gameSessionVolume: 0.6
