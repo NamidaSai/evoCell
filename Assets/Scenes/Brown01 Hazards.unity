@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -10246,15 +10246,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 403826906, guid: ed81e5b0c945d44689eecf834032dd17, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -21.999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335840829180075980, guid: ed81e5b0c945d44689eecf834032dd17,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -58
-      objectReference: {fileID: 0}
     - target: {fileID: 2335840829475492157, guid: ed81e5b0c945d44689eecf834032dd17,
         type: 3}
       propertyPath: m_Name
@@ -10314,31 +10305,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335840829602992888, guid: ed81e5b0c945d44689eecf834032dd17,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2335840830245936217, guid: ed81e5b0c945d44689eecf834032dd17,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 52.000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 3429318846402809591, guid: ed81e5b0c945d44689eecf834032dd17,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5066746913097882306, guid: ed81e5b0c945d44689eecf834032dd17,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -91
-      objectReference: {fileID: 0}
-    - target: {fileID: 7170294292714135726, guid: ed81e5b0c945d44689eecf834032dd17,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 71
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed81e5b0c945d44689eecf834032dd17, type: 3}
@@ -10476,17 +10442,17 @@ PrefabInstance:
     - target: {fileID: 5385144020135781927, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.4721527
+      value: -7.470665
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020135781927, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.916599
+      value: 7.9139595
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020135781928, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020270944676, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}

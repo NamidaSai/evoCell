@@ -159,7 +159,7 @@ public class TilemapToPngEditor : Editor
              Directory.CreateDirectory(dirPath);
          }
          File.WriteAllBytes(dirPath + nombre + ".png", bytes);
-        AssetDatabase.Refresh();
+        // AssetDatabase.Refresh();
         ImagenLista = null;
      }
 
