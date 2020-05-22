@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] bool noDeathMode = false;
-    [SerializeField] bool noLivesMode = false;
     [SerializeField] float walkSpeed = 5f;
     [SerializeField] float jumpSpeed = 10f;
     [SerializeField] float climbSpeed = 5f;
@@ -44,7 +42,7 @@ public class Player : MonoBehaviour
         Fall();
         ClimbLadder();
         FlipSprite();
-        Die();
+        if (gameSession) { Die(); }
         Test(); // for debugging purposes only, triggered with Tab key
     }
 
@@ -113,7 +111,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        if(noDeathMode) { Debug.Log("Player is dead."); return; }
+        if(gameSession.noDeathMode) { Debug.Log("Player is dead."); return; }
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazard")))
         {
             if (!isAlive) { return; }
@@ -121,7 +119,7 @@ public class Player : MonoBehaviour
             ResetStates();
             myAnimator.SetTrigger("Dying");
             myRigidbody.velocity = deathKick;
-            gameSession.ProcessPlayerDeath(deathFXTime, noLivesMode);
+            gameSession.ProcessPlayerDeath(deathFXTime);
         }
     }
 

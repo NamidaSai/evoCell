@@ -12,6 +12,9 @@ public class GameSession : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText = default;
     [SerializeField] GameObject loseLabel = default;
 
+    [SerializeField] public bool noDeathMode = false;
+    [SerializeField] bool noLivesMode = false;
+
     private void Awake()
     {
         int gameSessionCount = FindObjectsOfType<GameSession>().Length;
@@ -28,10 +31,33 @@ public class GameSession : MonoBehaviour
 
     private void Start()
     {
-        playerLives -= PlayerPrefsController.GetDifficultyLevel();
+        SetLivesOnDifficulty();
         scoreText.text = score.ToString();
-        livesText.text = playerLives.ToString();
         loseLabel.SetActive(false);
+    }
+
+    private void SetLivesOnDifficulty()
+    {
+        var difficulty = PlayerPrefsController.GetDifficultyLevel();
+        if (difficulty == 2f)
+        {
+            playerLives = 1f;
+            livesText.text = playerLives.ToString();
+        }
+        else if (difficulty == 1f)
+        {
+            playerLives = 3f;
+            livesText.text = playerLives.ToString();
+        }
+        else if (difficulty == 0f)
+        {
+            noLivesMode = true;
+            livesText.text = "∞";
+        }
+        else
+        {
+            Debug.LogError("Invalid Difficulty Level.");
+        }
     }
 
     public void AddToScore(int amount)
@@ -40,22 +66,20 @@ public class GameSession : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    public void ProcessPlayerDeath(float delayInSeconds, bool noLivesMode)
+    public void ProcessPlayerDeath(float delayInSeconds)
     {
         var sceneLoader = FindObjectOfType<SceneLoader>();
         var sfxPlayer = FindObjectOfType<SFXPlayer>();
 
-        if(noLivesMode) { sceneLoader.RestartLevel(delayInSeconds); return; }
-
         if (playerLives > 1)
         {
-            TakeLife();
+            if (!noLivesMode) { TakeLife(); }
             AudioSource.PlayClipAtPoint(sfxPlayer.GetLifeLostClip(), Camera.main.transform.position, sfxPlayer.GetLevelVolume());
             sceneLoader.RestartLevel(delayInSeconds);
         }
         else
         {
-            TakeLife();
+            if (!noLivesMode) { TakeLife(); }
             AudioSource.PlayClipAtPoint(sfxPlayer.GetLoseGameClip(), Camera.main.transform.position, sfxPlayer.GetGameSessionVolume());
             HandleLoseCondition();
         }

@@ -12,6 +12,7 @@ public class Shooter : MonoBehaviour
     GameObject projectileParent;
     AudioSource myAudioSource;
     SFXPlayer sfxPlayer;
+    Animator myAnimator;
 
     const string PROJECTILE_PARENT_NAME = "Projectiles";
 
@@ -20,6 +21,8 @@ public class Shooter : MonoBehaviour
         CreateProjectileParent();
         sfxPlayer = FindObjectOfType<SFXPlayer>();
         myAudioSource = GetComponent<AudioSource>();
+        myAnimator = GetComponent<Animator>();
+        myAnimator.SetFloat("cycleOffset", UnityEngine.Random.Range(0f,1f));
     }
 
     private void CreateProjectileParent()

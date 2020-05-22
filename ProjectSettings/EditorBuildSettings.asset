@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Brown04 Shooters.unity
     guid: b437158eaf40141a4ae73ffa67b2f15f
   - enabled: 1
+    path: Assets/Scenes/Brown05 Flood.unity
+    guid: 1aa58f0f7a2f84412aa613d9ef666155
+  - enabled: 1
     path: Assets/Scenes/Menu02 Win.unity
     guid: facfdac7790c748f6b569b70ffc4cf01
   m_configObjects: {}
