@@ -8,6 +8,13 @@ public class BreakableBlock : MonoBehaviour
 
     int timesHit = 0;
 
+    SFXPlayer sfxPlayer;
+
+    private void Start()
+    {
+        sfxPlayer = FindObjectOfType<SFXPlayer>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         HandleHit();
@@ -21,10 +28,12 @@ public class BreakableBlock : MonoBehaviour
         if(timesHit >= maxHits)
         {
             DestroyBlock();
+            AudioSource.PlayClipAtPoint(sfxPlayer.GetBlockBreakClip(), Camera.main.transform.position, sfxPlayer.GetBlockVolume());
         }
         else
         {
             ShowNextHitSprite();
+            AudioSource.PlayClipAtPoint(sfxPlayer.GetBlockHitClip(), Camera.main.transform.position, sfxPlayer.GetBlockVolume());
         }
     }
 

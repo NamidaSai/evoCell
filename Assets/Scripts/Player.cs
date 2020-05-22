@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] bool cheatMode = false;
     [SerializeField] float walkSpeed = 5f;
     [SerializeField] float jumpSpeed = 10f;
     [SerializeField] float climbSpeed = 5f;
@@ -19,6 +18,8 @@ public class Player : MonoBehaviour
     BoxCollider2D myFeet;
     float gravityScaleAtStart;
     GameSession gameSession;
+    AudioSource myAudioSource;
+    SFXPlayer sfxPlayer;
 
     void Start()
     {
@@ -28,6 +29,8 @@ public class Player : MonoBehaviour
         myBodyCollider = GetComponent<CapsuleCollider2D>();
         myFeet = GetComponent<BoxCollider2D>();
         gravityScaleAtStart = myRigidbody.gravityScale;
+        myAudioSource = GetComponent<AudioSource>();
+        sfxPlayer = FindObjectOfType<SFXPlayer>();
     }
 
     void Update()
@@ -38,8 +41,11 @@ public class Player : MonoBehaviour
         Jump();
         Fall();
         ClimbLadder();
-        FlipSprite(); // BUG: causes dissolve shader material not to display properly
-        Die();
+        FlipSprite();
+        if (gameSession)
+        {
+            Die();
+        }
         Test(); // for debugging purposes only, triggered with Tab key
     }
 
@@ -58,7 +64,7 @@ public class Player : MonoBehaviour
         bool playerHasHorizontalSpeed = (Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon);
         if (playerHasHorizontalSpeed)
         {
-            transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
+            transform.localScale = new Vector3(Mathf.Sign(myRigidbody.velocity.x), 1f, 1f);
         }
     }
 
@@ -73,6 +79,7 @@ public class Player : MonoBehaviour
             Vector2 jumpVelocityToAdd = new Vector2(0f, jumpSpeed);
             myRigidbody.velocity += jumpVelocityToAdd;
             myAnimator.SetTrigger("Jumped");
+            myAudioSource.PlayOneShot(sfxPlayer.GetJumpClip(),sfxPlayer.GetPlayerVolume());
         }
     }
 
@@ -107,7 +114,7 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        if(cheatMode) { Debug.Log("Player dead."); return; }
+        if(gameSession.noDeathMode) { Debug.Log("Player is dead."); return; }
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazard")))
         {
             if (!isAlive) { return; }
@@ -123,6 +130,14 @@ public class Player : MonoBehaviour
     {
         isAlive = false;
         ResetStates();
+        myAudioSource.PlayOneShot(sfxPlayer.GetWinLevelClip(), sfxPlayer.GetLevelVolume());
+    }
+
+    public void PlayFootstepSFX()
+    {
+        bool playerIsTouchingGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        if (!playerIsTouchingGround) { return; }
+        myAudioSource.PlayOneShot(sfxPlayer.GetFootstepsClip(), sfxPlayer.GetPlayerVolume());
     }
 
     private void ResetStates()
@@ -139,7 +154,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             //insert function to test
-            Die();
+            myAnimator.SetTrigger("Dying");
         }
     }
 }

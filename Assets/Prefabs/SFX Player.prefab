@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3921737650819015907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3921737650819015906}
+  - component: {fileID: 3921737650819015909}
+  m_Layer: 0
+  m_Name: SFX Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3921737650819015906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3921737650819015907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 297, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3921737650819015909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3921737650819015907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5959c78a6cbda41c1ae4c0ee3636495a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepsClips:
+  - {fileID: 8300000, guid: a6965d462d4bc4fb2a5b1f6a87ccab40, type: 3}
+  - {fileID: 8300000, guid: 4280b6dbaead54c12a4828c099ba41b8, type: 3}
+  - {fileID: 8300000, guid: 815378237b5084712ab5b6e678a0957d, type: 3}
+  - {fileID: 8300000, guid: 8dea47070d562453ebe728a3bba21316, type: 3}
+  - {fileID: 8300000, guid: a82a620acbcb94735aa31c0ce0f4983f, type: 3}
+  - {fileID: 8300000, guid: 4dfee95abb2be4e838e4ccb14bc30b7d, type: 3}
+  jumpClips:
+  - {fileID: 8300000, guid: 797e06c107e774028bb352d9c97ed45e, type: 3}
+  - {fileID: 8300000, guid: 0c305060e0792471f86085ea32804091, type: 3}
+  - {fileID: 8300000, guid: 0bba9f0a40ad74ba7819e14f0e90009f, type: 3}
+  - {fileID: 8300000, guid: f9139b382a99e4c2fa7ad20d4a47f193, type: 3}
+  - {fileID: 8300000, guid: e791d118d4a4840f6aa0bb2fac9d7e17, type: 3}
+  - {fileID: 8300000, guid: 29e77823c0a8a4aaebea62c7f31e9139, type: 3}
+  - {fileID: 8300000, guid: b25045705c4bf434c9491fa19a48e4a3, type: 3}
+  - {fileID: 8300000, guid: 5445041cf9cc04996b459b4b8250db3c, type: 3}
+  landingClip: {fileID: 8300000, guid: 5c4cb860209c440b78dd90edc619e9d3, type: 3}
+  shooterClips:
+  - {fileID: 8300000, guid: dee71c7c563584be39200590c0b10288, type: 3}
+  - {fileID: 8300000, guid: 82b55d7a676a948c294f69a014abf160, type: 3}
+  - {fileID: 8300000, guid: 745816056df16413dbb49228e221d6d7, type: 3}
+  - {fileID: 8300000, guid: 5672ec2ec831b41cda9363fe664b3b98, type: 3}
+  - {fileID: 8300000, guid: 9a52f4ebbdea6456ab91aea9b7f36bea, type: 3}
+  - {fileID: 8300000, guid: 0c9800b96520e4becb7157f9d8ea1cfa, type: 3}
+  - {fileID: 8300000, guid: 933b80e56300f4ff8a37c077a856dbf6, type: 3}
+  gemClips:
+  - {fileID: 8300000, guid: 336e8a0116061453680cd805b9331970, type: 3}
+  - {fileID: 8300000, guid: b17db14cfd3b74413a6e14fcc3723468, type: 3}
+  blockHits:
+  - {fileID: 8300000, guid: 69c7ac4bed23b4514a9ed13733d053f9, type: 3}
+  - {fileID: 8300000, guid: e4e73587f32cc4d379ff8c5eb44d17f9, type: 3}
+  - {fileID: 8300000, guid: c6e338158af6443b79d3ff0bd518d821, type: 3}
+  - {fileID: 8300000, guid: b8df803a38837458db4ae55cdc911d64, type: 3}
+  - {fileID: 8300000, guid: e4f7cf3753ee94c8fa90d737f7145aa4, type: 3}
+  blockBreak:
+  - {fileID: 8300000, guid: 94b6181d012d946f69eaa517aeafceb9, type: 3}
+  - {fileID: 8300000, guid: 2ddab88d5b6954aa0b7f74d71adeefc4, type: 3}
+  - {fileID: 8300000, guid: b00bc4a6c60b64071bd2ba3109710390, type: 3}
+  - {fileID: 8300000, guid: a6aa160651c1b4aa5a690c6d9f494c33, type: 3}
+  winLevelClip: {fileID: 8300000, guid: 9e03ae727d64b4da98f3a75a468d868b, type: 3}
+  lifeLostClip: {fileID: 8300000, guid: 35e70dae0bd624904ac122cb5cd1824c, type: 3}
+  loseGameClip: {fileID: 8300000, guid: 554263d7466784a1bb0022d5ab015bcd, type: 3}
+  playerVolume: 0.5
+  landingVolume: 0.1
+  enemyVolume: 0.05
+  interactablesVolume: 0.7
+  blockVolume: 0.3
+  levelVolume: 0.85
+  gameSessionVolume: 0.6

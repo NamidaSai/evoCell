@@ -12,8 +12,10 @@ public class Collectable : MonoBehaviour
     {
         if (!pickedUp)
         {
+            var sfxPlayer = FindObjectOfType<SFXPlayer>();
             pickedUp = true;
             FindObjectOfType<GameSession>().AddToScore(scoreValue);
+            AudioSource.PlayClipAtPoint(sfxPlayer.GetGemClip(), Camera.main.transform.position, sfxPlayer.GetInteractablesVolume());
             Destroy(gameObject);
         }
     }
