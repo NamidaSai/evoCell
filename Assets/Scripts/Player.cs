@@ -114,9 +114,9 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        if(gameSession.noDeathMode) { Debug.Log("Player is dead."); return; }
         if (myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazard")))
         {
+            if(gameSession.noDeathMode) { Debug.Log("Player is dead."); return; }
             if (!isAlive) { return; }
             isAlive = false;
             ResetStates();
@@ -154,7 +154,19 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             //insert function to test
-            myAnimator.SetTrigger("Dying");
+            FindObjectOfType<SceneLoader>().LoadNextScene(0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightAlt))
+        {
+            if(gameSession.noDeathMode)
+            {
+                gameSession.noDeathMode = false;
+            }
+            else if (!gameSession.noDeathMode)
+            {
+                gameSession.noDeathMode = true;
+            }
         }
     }
 }
