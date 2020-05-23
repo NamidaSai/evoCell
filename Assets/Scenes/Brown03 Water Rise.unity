@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -12968,6 +12968,15 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
+  - first: {x: 31, y: 4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: 32, y: 4, z: 0}
     second:
       serializedVersion: 2
@@ -13071,15 +13080,15 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 797df1399cccb4536b07256c26d440ee, type: 2}
-  - m_RefCount: 21
+  - m_RefCount: 22
     m_Data: {fileID: 11400000, guid: 23a1bbc74bed14f7f96de60c7af07603, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 4
     m_Data: {fileID: 21300000, guid: 75986ca318ba94ae5a437ea98f3d04d2, type: 3}
-  - m_RefCount: 21
+  - m_RefCount: 22
     m_Data: {fileID: 21300000, guid: 531ddf9ef15ad49699ac97a46664206e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 25
+  - m_RefCount: 26
     m_Data:
       e00: 1
       e01: 0
@@ -13098,7 +13107,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 25
+  - m_RefCount: 26
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -13152,14 +13161,30 @@ CompositeCollider2D:
         Y: 40000000
       - X: 147500000
         Y: 40000000
-    - - X: 317500000
-        Y: 97475008
-      - X: 312500000
-        Y: 97475008
-      - X: 312500000
+    - - X: 317500100
+        Y: 39999959
+      - X: 317500100
+        Y: 50000041
+      - X: 317500041
         Y: 50000100
       - X: 317500000
         Y: 50000100
+      - X: 317500000
+        Y: 97475008
+      - X: 312500000
+        Y: 97475008
+      - X: 312500000
+        Y: 50000100
+      - X: 312499959
+        Y: 50000100
+      - X: 312499900
+        Y: 50000041
+      - X: 312499900
+        Y: 39999959
+      - X: 312499959
+        Y: 39999900
+      - X: 317500041
+        Y: 39999900
     - - X: 327500100
         Y: -9999959
       - X: 327500041
@@ -13194,10 +13219,10 @@ CompositeCollider2D:
         Y: -30000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 31.749971, y: 5.00001}
+    - - {x: 31.749975, y: 3.99999}
       - {x: 31.749971, y: 9.747501}
       - {x: 31.25, y: 9.747471}
-      - {x: 31.250029, y: 5.00001}
+      - {x: 31.250027, y: 3.99999}
     - - {x: 14.749971, y: 4}
       - {x: 14.749971, y: 9.747501}
       - {x: 14.25, y: 9.747471}
@@ -30849,7 +30874,7 @@ PrefabInstance:
     - target: {fileID: 5385144020135781927, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.937747
+      value: 8.937762
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020135781928, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
