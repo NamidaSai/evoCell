@@ -39,8 +39,8 @@ public class Player : MonoBehaviour
 
         Walk();
         Jump();
-        Fall();
         ClimbLadder();
+        Fall();
         FlipSprite();
         if (gameSession)
         {
@@ -87,14 +87,14 @@ public class Player : MonoBehaviour
     {
         bool playerHasDownwardSpeed = (myRigidbody.velocity.y < Mathf.Epsilon);
         bool playerIsTouchingGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        bool playerIsTouchingLadder = myFeet.IsTouchingLayers(LayerMask.GetMask("Ladders"));
+        bool playerIsTouchingLadder = myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Ladders"));
 
         myAnimator.SetBool("isFalling", playerHasDownwardSpeed && !playerIsTouchingGround && !playerIsTouchingLadder);
     }
 
     private void ClimbLadder()
     {
-        bool playerIsTouchingLadder = myFeet.IsTouchingLayers(LayerMask.GetMask("Ladders"));
+        bool playerIsTouchingLadder = myBodyCollider.IsTouchingLayers(LayerMask.GetMask("Ladders"));
 
         if (!playerIsTouchingLadder)
         {
