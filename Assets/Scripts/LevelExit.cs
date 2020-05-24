@@ -7,7 +7,7 @@ public class LevelExit : MonoBehaviour
 {
     [SerializeField] float levelLoadDelay = 1f;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    IEnumerator OnTriggerEnter2D(Collider2D other)
     {
         var waterRise = FindObjectOfType<VerticalScroll>();
         if (waterRise)
@@ -15,6 +15,7 @@ public class LevelExit : MonoBehaviour
             waterRise.isActive = false;
         }
         FindObjectOfType<Player>().Win();
-        FindObjectOfType<SceneLoader>().LoadNextScene(levelLoadDelay);
+        yield return new WaitForSeconds(levelLoadDelay);
+        FindObjectOfType<SceneLoader>().LoadNextScene(1f);
     }
 }

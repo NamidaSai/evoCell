@@ -154,7 +154,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             //insert function to test
-            FindObjectOfType<SceneLoader>().LoadNextScene(0f);
+            FindObjectOfType<SceneLoader>().LoadNextScene(1f);
         }
 
         if (Input.GetKeyDown(KeyCode.RightAlt))

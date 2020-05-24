@@ -5,20 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] GameObject transition = default;
+    [SerializeField] float transitionDuration = 1f;
+
     int currentSceneIndex;
 
     private void Start()
     {
+        transition.SetActive(true);
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void LoadMainMenu()
     {
-        Time.timeScale = 1f;
-        FindObjectOfType<GameSession>().ResetGame();
-        SceneManager.LoadScene(0);
+        StartCoroutine(WaitAndStart(transitionDuration));
     }
 
+    IEnumerator WaitAndStart(float delayInSeconds)
+    {
+        Time.timeScale = 1f;
+        transition.GetComponent<Animator>().SetTrigger("FadeIn");
+        yield return new WaitForSeconds(delayInSeconds);
+        SceneManager.LoadScene(0);
+    }
     public void LoadNextScene(float delayInSeconds)
     {
         StartCoroutine(WaitAndLoad(delayInSeconds));
@@ -26,9 +35,11 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator WaitAndLoad(float delayInSeconds)
     {
+        transition.GetComponent<Animator>().SetTrigger("FadeIn");
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         yield return new WaitForSeconds(delayInSeconds);
         SceneManager.LoadScene(currentSceneIndex + 1);
+        transition.GetComponent<Animator>().SetTrigger("FadeOut");
     }
 
     public void RestartLevel(float delayInSeconds)
@@ -38,9 +49,11 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator WaitAndReload(float delayInSeconds)
     {
+        transition.GetComponent<Animator>().SetTrigger("FadeIn");
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         yield return new WaitForSeconds(delayInSeconds);
         SceneManager.LoadScene(currentSceneIndex);
+        transition.GetComponent<Animator>().SetTrigger("FadeOut");
     }
 
     public void QuitGame()
@@ -49,3 +62,4 @@ public class SceneLoader : MonoBehaviour
         Debug.Log("Game has been quit.");
     }
 }
+
