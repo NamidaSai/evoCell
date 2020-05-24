@@ -49,11 +49,9 @@ public class SceneLoader : MonoBehaviour
 
     IEnumerator WaitAndReload(float delayInSeconds)
     {
-        transition.GetComponent<Animator>().SetTrigger("FadeIn");
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         yield return new WaitForSeconds(delayInSeconds);
         SceneManager.LoadScene(currentSceneIndex);
-        transition.GetComponent<Animator>().SetTrigger("FadeOut");
     }
 
     public void QuitGame()
