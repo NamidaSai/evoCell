@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameSession : MonoBehaviour
 {
@@ -52,6 +53,10 @@ public class GameSession : MonoBehaviour
             {
                 Pause();
             }
+        }
+        if (SceneManager.GetActiveScene().name == "Menu01 Start")
+        {
+            ResetGame();
         }
     }
 
