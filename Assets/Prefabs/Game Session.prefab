@@ -1116,13 +1116,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2335840829180075982}
-    characterCount: 0
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oh no, you lost!
+  m_text: Another cell goes...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6dda78525725e46b1860b060f142361e, type: 2}
   m_sharedMaterial: {fileID: -2669448635279489097, guid: 6dda78525725e46b1860b060f142361e,
@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287028223
+    rgba: 4287159295
   m_fontColor: {r: 1, g: 0.85882354, b: 0.53333336, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1628,13 +1628,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2335840830245936216}
-    characterCount: 0
+    characterCount: 20
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
