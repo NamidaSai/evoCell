@@ -85,10 +85,10 @@ MonoBehaviour:
   winLevelClip: {fileID: 8300000, guid: 9e03ae727d64b4da98f3a75a468d868b, type: 3}
   lifeLostClip: {fileID: 8300000, guid: 35e70dae0bd624904ac122cb5cd1824c, type: 3}
   loseGameClip: {fileID: 8300000, guid: 554263d7466784a1bb0022d5ab015bcd, type: 3}
-  playerVolume: 0.5
-  landingVolume: 0.1
-  enemyVolume: 0.05
-  interactablesVolume: 0.7
-  blockVolume: 0.3
-  levelVolume: 0.85
-  gameSessionVolume: 0.6
+  playerVolume: 0.8
+  landingVolume: 0.4
+  enemyVolume: 0.15
+  interactablesVolume: 1
+  blockVolume: 0.5
+  levelVolume: 1
+  gameSessionVolume: 1
