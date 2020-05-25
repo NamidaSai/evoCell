@@ -13,14 +13,18 @@ public class SceneLoader : MonoBehaviour
 
     int currentSceneIndex;
 
-    private void Start()
+    private void Awake()
     {
-        transition.SetActive(true);
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         if(currentSceneIndex == 0)
         {
             StartCoroutine(SplashDelay());
         }
+    }
+
+    private void Start()
+    {
+        transition.SetActive(true);
     }
 
     IEnumerator SplashDelay()

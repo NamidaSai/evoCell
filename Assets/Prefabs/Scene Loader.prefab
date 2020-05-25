@@ -47,7 +47,7 @@ MonoBehaviour:
   transition: {fileID: 6039331139488337626}
   transitionDuration: 1
   splashDuration: 3
-  defaultMusic: 0.3
+  defaultMusic: 0.2
   defaultDifficulty: 1
 --- !u!1001 &667726053
 PrefabInstance:
@@ -56,6 +56,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8483747633542454477}
     m_Modifications:
+    - target: {fileID: 6039331138970835272, guid: c7adebe4a9e8b470fb119e3a14d1c908,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.85098046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039331138970835272, guid: c7adebe4a9e8b470fb119e3a14d1c908,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.7490196
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039331138970835272, guid: c7adebe4a9e8b470fb119e3a14d1c908,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.627451
+      objectReference: {fileID: 0}
     - target: {fileID: 6039331139014164028, guid: c7adebe4a9e8b470fb119e3a14d1c908,
         type: 3}
       propertyPath: m_LocalPosition.x
