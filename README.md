@@ -11,7 +11,7 @@ https://soundcloud.com/timeveil
 ---------------------------------------------------------------------------------------------------------------------------
 ART ASSETS
 
-- Kenney NL's 2D Abstract Platformer Asset Pack: https://kenney.nl/assets/abstract-platformer
+- Kenney's 2D Abstract Platformer Asset Pack: https://kenney.nl/assets/abstract-platformer
 
 ---------------------------------------------------------------------------------------------------------------------------
 FONTS
@@ -26,7 +26,6 @@ Unity Version: 2019.3.7f1
 
 - Unity's TextMesh Pro
 - Unity's 2D Extras
-- Dented Pixel's LeanTwean
 - leocub58's TilemapToPng.cs
 
 ---------------------------------------------------------------------------------------------------------------------------
