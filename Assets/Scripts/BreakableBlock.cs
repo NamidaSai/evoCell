@@ -5,6 +5,7 @@ using UnityEngine;
 public class BreakableBlock : MonoBehaviour
 {
     [SerializeField] Sprite[] hitSprites = default;
+    [SerializeField] GameObject particlesPrefab = default;
 
     int timesHit = 0;
 
@@ -29,6 +30,8 @@ public class BreakableBlock : MonoBehaviour
         {
             DestroyBlock();
             AudioSource.PlayClipAtPoint(sfxPlayer.GetBlockBreakClip(), Camera.main.transform.position, sfxPlayer.GetBlockVolume());
+            GameObject explosion = Instantiate(particlesPrefab, transform.position, Quaternion.identity);
+            Destroy(explosion,2f);
         }
         else
         {
