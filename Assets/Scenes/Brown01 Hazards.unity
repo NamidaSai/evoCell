@@ -10079,6 +10079,96 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2335840829602992888, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335840829602992892, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335840829602992892, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335840829602992892, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335840830245936216, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429318846402809591, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.85720414
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 5005748331481603141, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4287159295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960192108620752485, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960192108620752485, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960192108620752485, guid: ed81e5b0c945d44689eecf834032dd17,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed81e5b0c945d44689eecf834032dd17, type: 3}
 --- !u!1001 &3913597619183880480
@@ -10215,17 +10305,17 @@ PrefabInstance:
     - target: {fileID: 5385144020135781927, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.472149
+      value: -7.470669
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020135781927, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.916613
+      value: 7.9139786
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020135781928, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020270944676, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}

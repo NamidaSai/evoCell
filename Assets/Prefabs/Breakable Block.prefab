@@ -145,4 +145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitSprites:
   - {fileID: 21300000, guid: 31bc74fa49e44478d84aba4f9cbe0aca, type: 3}
-  sfxSoften: 0.2
+  particlesPrefab: {fileID: 3962712469467402333, guid: f48846d04cea7456393750ace29ea90a,
+    type: 3}

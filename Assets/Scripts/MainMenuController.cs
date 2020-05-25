@@ -8,9 +8,7 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] GameObject optionsScreen = default;
     [SerializeField] GameObject mainMenu = default;
     [SerializeField] Slider musicSlider = default;
-    [SerializeField] float defaultMusic = 0.5f;
     [SerializeField] Slider difficultySlider = default;
-    [SerializeField] float defaultDifficulty = 1f;
 
     private void Start()
     {
@@ -44,11 +42,5 @@ public class MainMenuController : MonoBehaviour
         PlayerPrefsController.SetDifficultyLevel(difficultySlider.value);
         mainMenu.SetActive(true);
         optionsScreen.SetActive(false);
-    }
-
-    public void SetDefaults()
-    {
-        musicSlider.value = defaultMusic;
-        difficultySlider.value = defaultDifficulty;
     }
 }

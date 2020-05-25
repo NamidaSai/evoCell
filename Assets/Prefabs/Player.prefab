@@ -212,8 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1ea896eca6c84ae4ba8417177f5ec50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noDeathMode: 0
-  noLivesMode: 0
   walkSpeed: 5
   jumpSpeed: 10
   climbSpeed: 5
@@ -237,7 +235,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 110
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
