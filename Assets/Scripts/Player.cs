@@ -130,7 +130,11 @@ public class Player : MonoBehaviour
     {
         isAlive = false;
         ResetStates();
-        myAudioSource.PlayOneShot(sfxPlayer.GetWinLevelClip(), sfxPlayer.GetLevelVolume());
+        if(!gameSession.GetComponent<AudioSource>())
+        {
+            gameSession.gameObject.AddComponent(typeof(AudioSource));
+        }
+        gameSession.GetComponent<AudioSource>().PlayOneShot(sfxPlayer.GetWinLevelClip(), sfxPlayer.GetLevelVolume());
     }
 
     public void PlayFootstepSFX()
