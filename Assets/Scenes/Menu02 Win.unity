@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3184,7 +3184,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You did it. \nYou will evolve."
+  m_text: 'Evolution
+
+    is one cell away'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f440c1f53ee2b4856b61ec1776ed132a, type: 2}
   m_sharedMaterial: {fileID: 5501020297024161599, guid: f440c1f53ee2b4856b61ec1776ed132a,
@@ -3254,10 +3256,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 76617736}
-    characterCount: 29
+    characterCount: 26
     spriteCount: 0
-    spaceCount: 6
-    wordCount: 6
+    spaceCount: 4
+    wordCount: 5
     linkCount: 0
     lineCount: 2
     pageCount: 1
