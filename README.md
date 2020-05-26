@@ -6,7 +6,7 @@ evoCell follows the quest of a cute little cell to find as many gems as possible
 This game is a 10 minutes simple 2D platformer with 5 levels, made using the Unity Game Engine.
 
 All sound effects and music are my own. Soundtrack available at the link below:
-https://soundcloud.com/timeveil
+https://soundcloud.com/timeveil/evocell
 
 QA Tester: Akshay Garg
 
