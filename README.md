@@ -8,6 +8,8 @@ This game is a 10 minutes simple 2D platformer with 5 levels, made using the Uni
 All sound effects and music are my own. Soundtrack available at the link below:
 https://soundcloud.com/timeveil
 
+QA Tester: Akshay Garg
+
 ---------------------------------------------------------------------------------------------------------------------------
 ART ASSETS
 
