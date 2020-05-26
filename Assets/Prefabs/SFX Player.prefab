@@ -91,4 +91,4 @@ MonoBehaviour:
   interactablesVolume: 1
   blockVolume: 0.5
   levelVolume: 1
-  gameSessionVolume: 1
+  gameSessionVolume: 0.94

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11774,7 +11774,7 @@ TilemapRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0, y: 0.020312488, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -13183,8 +13183,13 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 34.43016, y: 26.350319}
-      - {x: 7.213196, y: 26.318808}
-      - {x: 7.1151276, y: 14.98257}
+      - {x: 5.828949, y: 26.093376}
+      - {x: 5.708435, y: 17.025301}
+      - {x: 4.6663055, y: 16.144161}
+      - {x: 3.7885895, y: 15.555681}
+      - {x: 2.9960327, y: 15.249473}
+      - {x: 2.4351654, y: 15.080856}
+      - {x: 1.7706909, y: 14.962498}
       - {x: -19.895775, y: 14.934643}
       - {x: -19.883133, y: -7.0431604}
       - {x: 34.37137, y: -7.136291}
@@ -13317,6 +13322,75 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &832785528
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185587100394108412, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7387692134685900644, guid: 3f15d9ecb219244e9b6c84cb9f5cc870,
+        type: 3}
+      propertyPath: m_Name
+      value: Music Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f15d9ecb219244e9b6c84cb9f5cc870, type: 3}
 --- !u!4 &860892140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7459758467740381025, guid: 08657145810234fce9a0b55c4c13328c,
@@ -30394,17 +30468,17 @@ PrefabInstance:
     - target: {fileID: 5385144020135781927, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.471039
+      value: -7.438965
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020135781927, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.937762
+      value: 7.9346585
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020135781928, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}
       propertyPath: orthographic size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5385144020270944676, guid: 6eede9f4114184f079a8ddd4ea86bb80,
         type: 3}

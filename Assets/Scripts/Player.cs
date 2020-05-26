@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         {
             Die();
         }
-        Test(); // for debugging purposes only, triggered with Tab key
+        // Test(); // for debugging purposes only, triggered with Tab key
     }
 
     private void Walk()
