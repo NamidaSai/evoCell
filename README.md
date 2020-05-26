@@ -5,6 +5,8 @@ evoCell follows the quest of a cute little cell to find as many gems as possible
 
 This game is a 10 minutes simple 2D platformer with 5 levels, made using the Unity Game Engine.
 
+On the 6th of April 2020 I started learning game development in Unity with no prior experience. This game is the result of 7 intense weeks of learning and my first proper experience on my journey to become a game developer. It's far from perfect, it's simple and a little bit buggy, but it's my own and I'm proud of it.
+
 All sound effects and music are my own. Soundtrack available at the link below:
 https://soundcloud.com/timeveil/evocell
 
